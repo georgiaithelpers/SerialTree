@@ -1,0 +1,53 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  vars:
+    config_files:
+      - test.conf
+      - test2.conf
+
+  tasks:
+    - pause:
+        prompt: "მონაცემთა ბაზა: "
+      register: new_database_value
+
+    - pause:
+        prompt: "hostname: "
+      register: new_host_value
+
+    - pause:
+        prompt: "პაროლი: "
+      register: new_password_value
+
+    - pause:
+        prompt: "მომხმარებლის სახელი: "
+      register: new_user_value
+
+    - name:  
+      lineinfile:
+        path: "{{ item }}"
+        regexp: '^database ='
+        line: 'database = "{{ new_database_value.user_input }}"'
+      loop: "{{ config_files }}"
+
+    - name:  
+      lineinfile:
+        path: "{{ item }}"
+        regexp: '^host ='
+        line: 'host = "{{ new_host_value.user_input }}"'
+      loop: "{{ config_files }}"
+
+    - name:  
+      lineinfile:
+        path: "{{ item }}"
+        regexp: '^password ='
+        line: 'password = "{{ new_password_value.user_input }}"'
+      loop: "{{ config_files }}"
+
+    - name:  
+      lineinfile:
+        path: "{{ item }}"
+        regexp: '^user ='
+        line: 'user = "{{ new_user_value.user_input }}"'
+      loop: "{{ config_files }}"

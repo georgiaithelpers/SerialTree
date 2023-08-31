@@ -1,0 +1,9 @@
+body {
+            background-image: url('https://img.audiomania.ru/images/content/5b42c281d8615d2c4b07cb00d396d342.jpg');
+            background-size: cover;
+	    background-repeat: no-repeat;
+	    height:100vh;
+	    background-attachment: fixed;
+	    color:white;
+	}
+

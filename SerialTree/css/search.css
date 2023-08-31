@@ -1,0 +1,20 @@
+        .mb-xozo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mb-input-xozo {
+            margin-right: 25px;
+        }
+        
+        .btn-xozo {
+            background-color: #198754;
+            border-color: #198754;
+            color: #ffffff;
+            border-radius: 5px;
+	    border: none;
+        }
+
+        .btn-xozo:hover {
+            background-color: #157347;
+        }
