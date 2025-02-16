@@ -1,0 +1,99 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2.0em;
+    font-weight: bold;
+}
+
+.container {
+    padding: 10px;
+}
+
+/* Адаптивный стиль для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.9em;
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .table {
+        font-size: 16px;
+	font-weight: bold;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .table th {
+        display: none; /* Скрываем заголовки таблицы на мобильных устройствах */
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .table td {
+        text-align: left;
+        position: relative;
+        padding-left: 2%;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .mb-input-xozo, .btn-xozo {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .modal-dialog {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    /* Мобильная версия формы */
+    .mb-xozo {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="number"] {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
